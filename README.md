@@ -1,2 +1,0 @@
-# MathSolver
-Simple Maths solver
