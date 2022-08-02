@@ -58,9 +58,9 @@ function calcF(){
             var sum2 = (y2 + y1);
             var resx = sum1/2;
             var resy = sum2/2;
-            resultTxt.innerHTML = "Middle point = ("+ resx+","+resy+")";
+            resultTxt.innerHTML = "Point médian = ("+ resx+","+resy+")";
             // loading.classList.remove('hidden');
-            setInterval(()=>{steps.innerHTML = "We have A("+co+") and B("+co+")<br>AB((xᵇ+xᵃ)/2,(yᵇ+xᵃ)/2)<br>AB(("+x2+"+"+x1+")/2,("+y2+"+"+y1+")/2)<br>AB("+sum1+")/2,("+sum2+")/2)<br>AB("+resx+","+resy+")";
+            setInterval(()=>{steps.innerHTML = "On a A("+co+") et B("+co+")<br>AB((xᵇ+xᵃ)/2,(yᵇ+xᵃ)/2)<br>AB(("+x2+"+"+x1+")/2,("+y2+"+"+y1+")/2)<br>AB("+sum1+")/2,("+sum2+")/2)<br>AB("+resx+","+resy+")";
             loading.classList.add('hidden');},2500);
             loading.classList.remove('hidden');
             steps.innerHTML = "\n\n\n\n\n"
@@ -68,12 +68,12 @@ function calcF(){
             if(!errortxt.classList.contains("e")){
                 errortxt.classList.add("e");
             }
-            errortxt.innerHTML = "The values you inputed are not a number"
+            errortxt.innerHTML = "Les valeurs que vous avez saisies ne sont pas un nombre"
         }
     }else{
         if(!errortxt.classList.contains("e")){
             errortxt.classList.add("e");
         }
-        errortxt.innerHTML = "All fields are required"
+        errortxt.innerHTML = "Tous les champs sont obligatoires"
     }
 }

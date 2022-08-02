@@ -53,11 +53,11 @@ function calcF(x1, y1, x2, y2){
             var sq2 = Math.pow(diff2, 2);
             var result = sq1 + sq2;
             var resultPR = Math.sqrt(result);
-            resultTxt.innerHTML = "Distance = √"+ result +"<br> Precise Distance = "+ resultPR +"";
+            resultTxt.innerHTML = "Distance = √"+ result +"<br> Distance precise = "+ resultPR +"";
             loading.classList.toggle('hidden');
             wait(2.5);
             loading.classList.toggle('hidden');
-            steps.innerHTML = "We have A("+co+") and B("+co+")<br>AB=√(xᵇ - xᵃ)² + (yᵇ + yᵃ)²<br>AB=√("+x2+" - "+x1+")² + ("+y2+" - "+y1+")²<br>AB=√("+diff1+")² + ("+diff2+")²<br>AB=√("+sq1+" + "+sq2+")<br>AB=√"+result+"<br><ion-icon name='calculator-outline'></ion-icon>AB="+resultPR;
+            steps.innerHTML = "On a A("+co+") et B("+co+")<br>AB=√(xᵇ - xᵃ)² + (yᵇ + yᵃ)²<br>AB=√("+x2+" - "+x1+")² + ("+y2+" - "+y1+")²<br>AB=√("+diff1+")² + ("+diff2+")²<br>AB=√("+sq1+" + "+sq2+")<br>AB=√"+result+"<br><ion-icon name='calculator-outline'></ion-icon>AB="+resultPR;
         }else{
             if(!errortxt.classList.contains("e")){
                 errortxt.classList.add("e");

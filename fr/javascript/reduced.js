@@ -68,12 +68,12 @@ function calcF(){
             var xm = x1*m;
             var invXm = inverseSign(xm);
             var b = y1 + invXm;
-            const L1="We consider the reduced equation of AB as y=mx+b";
-            const L2="Let's determine m:";
+            const L1="Nous considérons l’équation réduite de AB comme y=mx+b";
+            const L2="Déterminons m:";
             const L3="m=(yᵇ-yᵃ)/(xᵇ-xᵃ)";
-            const L4="So AB: y="+m+"x+b";
-            const L5="Let's determine b:";
-            const L6="Since A∈(AB)";
+            const L4="Alors AB: y="+m+"x+b";
+            const L5="Déterminons b:";
+            const L6="Puisque A∈(AB)";
             const L7="yᵃ=m*xᵃ+b";
             const L8=y1+"="+m+"*"+x1+"+b";
             const L9=y1+"="+xm+"+b";
@@ -81,7 +81,7 @@ function calcF(){
             const lines = [L1,L2,L3,L4,L5,L6,L7,L8,L9,L10];
             const txt = lines.join("<br>");
             
-            resultTxt.innerHTML = "Reduced equation: y="+m+"x+"+b;
+            resultTxt.innerHTML = "Equation réduite: y="+m+"x+"+b;
             setInterval(()=>{steps.innerHTML = txt;
             loading.classList.add('hidden');},2500);
             loading.classList.remove('hidden');
@@ -90,12 +90,12 @@ function calcF(){
             if(!errortxt.classList.contains("e")){
                 errortxt.classList.add("e");
             }
-            errortxt.innerHTML = "The values you inputed are not a number"
+            errortxt.innerHTML = "Les valeurs que vous avez saisies ne sont pas un nombre"
         }
     }else{
         if(!errortxt.classList.contains("e")){
             errortxt.classList.add("e");
         }
-        errortxt.innerHTML = "All fields are required"
+        errortxt.innerHTML = "Tous les champs sont obligatoires"
     }
 }
