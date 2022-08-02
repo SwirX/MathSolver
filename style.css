@@ -324,7 +324,7 @@ body{
 .return{
     color: var(--secondarycolor);
 }
-.return .txt{
+.return-txt{
     position: absolute;
     color: var(--secondarycolor);
     text-decoration: none;
