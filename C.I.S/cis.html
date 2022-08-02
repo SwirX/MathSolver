@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinates in space</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- background -->
+    <div>
+        <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+        </div>
+    </div>
+    <!-- foreground -->
+    <div class="menu">
+        <div>
+        <a class="return" href="../index.html"><ion-icon name="chevron-back-outline"></ion-icon></a>
+        <br><br><br>
+        </div>
+        <div class="search">
+            <input type="text" placeholder='search' name="search" class="input">
+            <button class="search-btn"><ion-icon name="search-outline"></ion-icon></button>
+            <br>
+            <label class="switch">
+                <input class="theme-toggle"type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+    <hr>
+    <div id="wrapper">
+        <div class="category"id='distance'>
+            <h1 class="title">Distance between two points</h1>
+            <p class="info">get the distance between two points from the coordinates of your two points</p>
+            <a href="./distance.html" class="open-btn"id="choose-co">Open<ion-icon class="icon" name="chevron-forward-outline"></ion-icon></a>
+        </div><hr width="75%">
+        <div class="category"id='middle'>
+            <h1 class="title">Middle of two points</h1>
+            <p class="info">get the middle point of a line from the coordinates of two points</p>
+            <a href="./middle.html" class="open-btn"id="choose-co">Open<ion-icon class="icon" name="chevron-forward-outline"></ion-icon></a>
+        </div><hr width="75%">
+        <div class="category"id='Reduced'>
+            <h1 class="title">Reduced equation</h1>
+            <p class="info">get the reduced equation of a line with two points</p>
+            <a href="./reduced.html" class="open-btn"id="choose-co">Open<ion-icon class="icon" name="chevron-forward-outline"></ion-icon></a>
+        </div><hr width="75%">
+    </div>
+    <!-- scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../javascript/main.js"></script>
+</body>
+</html>
