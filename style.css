@@ -322,6 +322,9 @@ body{
     display: flex;
 }
 .return{
+    color: var(--secondarycolor);
+}
+.return .txt{
     position: absolute;
     color: var(--secondarycolor);
     text-decoration: none;
