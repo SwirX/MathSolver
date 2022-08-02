@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Maths Solver lol</title>
+        <!-- <link rel="icon" type="image/x-icon" href="imgs/icon.png"> -->
+    </head>
+    <body>
+        <!-- background -->
+        <div>
+            <div class="area" >
+                <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+            </div>
+        </div>
+        <!-- foreground -->
+        <div class="menu">
+            <h1 class="text">Bienvenue</h1>
+            <div class="search">
+                <input type="text" placeholder='search' name="search" class="input">
+                <button class="search-btn"><ion-icon name="search-outline"></ion-icon></button>
+                <br>
+                <label class="switch">
+                    <input class="theme-toggle"type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+            <hr>
+            <div id="wrapper">
+                <div class="about">
+                    <h1 class="title">Math solver</h1>
+                    <p class="info">solveur mathématique simple avec explication étape par étape</p>
+                </div><hr width="75%">
+                <div class="category"id='coordinates'>
+                    <h1 class="title">Coordonnées dans l’espace</h1>
+                    <p class="info">obtenir la distance entre deux points ou le milieu d’une ligne ou l’équation réduite</p>
+                    <a href="./C.I.S/cis" class="open-btn"id="choose-co">Open<ion-icon class="icon" name="chevron-forward-outline"></ion-icon></a>
+                </div>
+                <div class="category"id='graphcalc'>
+                    <h1 class="title">Calculatrice graphique</h1>
+                    <p class="info">obtenir le graphique d’une équation linéaire</p>
+                    <a href="./graph" class="open-btn"id="choose-co">Open<ion-icon class="icon" name="chevron-forward-outline"></ion-icon></a>
+                </div>
+            </div>
+        <!-- scripts -->
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="./javascript/main.js"></script>
+        <script src="./javascript/EqSBrute.js" ></script>
+    </body>
+</html>
