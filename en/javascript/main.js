@@ -39,7 +39,7 @@ function SecretSnakeManip(){
         clickcount++;
         print("clickcount= "+clickcount);
         if(clickcount >=5){
-            window.location.href="file:///C:/Users/HP/Desktop/ali/Projects/mathslol/Snake/index.html";
+            window.location.href="https://swirx.github.io/MathSolver/Snake/";
         }
     }
 }
