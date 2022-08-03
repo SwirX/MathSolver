@@ -46,3 +46,19 @@ function BruteForceSolve(eq){
         }
     }
 }
+
+function BruteForceSolveV2(eq){
+    const re = new RegExp('[\s \+ \- \* \/]');
+    print(eq);
+    var fpart = eq.split("=")[0];
+    print(fpart);
+    var spart = eq.split("=")[1];
+    print(spart);
+    var flist = fpart.split(re);
+    print(flist);
+    var slist = spart.split(re);
+    print(slist);
+    for(i=0;i<flist.lenght;i++){
+            print(flist[i])
+    }
+}

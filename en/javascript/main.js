@@ -1,6 +1,6 @@
 const theme_toggle = document.querySelector(".theme-toggle");
 const body = document.querySelector('body');
-
+const searchbtn = document.querySelector('.search-btn');
 // const ls = window.localStorage;
 // const ss = window.sessionStorage;
 
@@ -14,7 +14,34 @@ const body = document.querySelector('body');
 //     ls.sessionStorage.user = JSON.stringify(usr);
 // }
 
+
 theme_toggle.onclick = ()=>{
     body.classList.toggle('darkmode');
 }
 
+
+// SecretSnakeGame
+var clickcount = 0
+
+function resetSecretSnake(){
+    print("timer ended")
+    searchbtn.removeEventListener("click",SecretSnakeManip);
+    clickcount = 0;
+}
+
+function SecretSnakeManip(){
+    print(clickcount);
+    if(clickcount==0){
+        print("timer started");
+        setInterval(resetSecretSnake ,5000);
+        clickcount++;
+    }else{
+        clickcount++;
+        print("clickcount= "+clickcount);
+        if(clickcount >=5){
+            window.location.href="file:///C:/Users/HP/Desktop/ali/Projects/mathslol/Snake/index.html";
+        }
+    }
+}
+
+searchbtn.addEventListener('click',SecretSnakeManip);

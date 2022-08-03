@@ -1,0 +1,130 @@
+body {
+	margin:0px;
+	padding:0px;
+    background-color: #e8e8e8;
+}
+
+#game-area {
+	margin:10px;
+	padding:0px;
+}
+
+#mode-wrapper {
+    color: #ffffff;
+    font-family: Verdana, arial, helvetica, sans-serif;
+    font-size: 14px;
+
+}
+
+#game-area:focus { outline: none; }
+
+a.snake-link, a.snake-link:link, a.snake-link:visited {
+  color: #4B4BFF;
+}
+
+a.snake-link:hover {
+  color: #FfFf54;
+}
+
+.snake-pause-screen {
+    font-family: Verdana, arial, helvetica, sans-serif;
+    font-size: 14px;
+    position:absolute;
+    width:300px;
+    height:80px;
+    text-align:center;
+    top:50%;
+    left:50%;
+    margin-top:-40px;
+    margin-left:-150px;
+    display:none;
+    background-color:black;
+    color:white;
+}
+
+.snake-panel-component {
+    position: absolute;
+    font-family: Verdana, arial, helvetica, sans-serif;
+    font-size: 14px;
+    color: #1D1D27;
+    text-align: center;
+    padding: 8px;
+    margin: 0px;
+}
+
+.snake-snakebody-block {
+    margin: 0px;
+    padding: 0px;
+    background-color: #FF0000;
+    position: absolute;
+    border: 0px solid #343434;
+    background-repeat: no-repeat;
+}
+
+.snake-snakebody-alive {
+   background: #4BFF4B;
+}
+.snake-snakebody-dead {
+   background: #2AFF2A;
+}
+
+.snake-food-block {
+    margin: 0px;
+    padding: 0px;
+    background-color: #FF0000;
+    border: 0px solid #000080;
+    position: absolute;
+}
+
+.snake-playing-field {
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    background-color: #343434;
+    border: 0px solid #0000A8;
+}
+
+.snake-game-container {
+    margin: 0px;
+    padding: 0px;
+    border-width: 0px;
+    border-style: none;
+    zoom: 1;
+    position: relative;
+}
+
+.snake-welcome-dialog {
+    padding: 8px;
+    margin: 0px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Verdana, arial, helvetica, sans-serif;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    /*height: 150px;*/
+    margin-top: -100px;
+    margin-left: -158px;
+    text-align: center;
+    display: block;
+}
+
+.snake-try-again-dialog, .snake-win-dialog {
+    padding: 8px;
+    margin: 0px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Verdana, arial, helvetica, sans-serif;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 100px;
+    margin-top: -75px;
+    margin-left: -158px;
+    text-align: center;
+    display: none;
+}
