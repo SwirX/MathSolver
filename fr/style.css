@@ -279,6 +279,26 @@ body{
     outline: 1px solid var(--secondarycolor);
     
 }
+.button{
+    color:var(--secondarycolor);
+    padding: 5px;
+    margin: 5px;
+    left: 25px;
+    border: none;
+    border-radius: 8px;
+    background: var(--btn3dbg);
+    box-shadow: var(--btn3dshadow);
+}
+.button.selected{
+    color:var(--primarycolor);
+    padding: 5px;
+    margin: 5px;
+    left: 25px;
+    border: none;
+    border-radius: 50px;
+    background: var(--secondarycolor);
+    box-shadow: var(--btn3dshadow);
+}
 .about{
     font-size: larger;
     backdrop-filter: blur(20px);
@@ -488,3 +508,32 @@ input {
 .graph{
     padding: 0;
 }
+/* parity */
+.num{
+    text-align: center;
+    font-size: 22px;
+    border: none;
+    transition: 0.3s;
+    border-radius: 31px;
+    background: var(--btn3dbg);
+    box-shadow:  var(--btn3dshadow);
+    color: var(--secondarycolor);
+}
+.num:focus{
+    outline-color: var(--btn3dbg);
+    background: var(--btn3dbg);
+    box-shadow: var(--btn3dshadowH);
+    transition: 0.3s;
+}
+.input.di {
+    text-align: center;
+    font-size: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border: none;
+    transition: 0.3s;
+    border-radius: 8px;
+    background: var(--btn3dbg);
+    box-shadow:  var(--btn3dshadow);
+    color: var(--secondarycolor);
+   }
