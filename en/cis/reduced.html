@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinates in space</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type="text/javascript" charset="UTF-8"
+ src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css" />
+</head>
+<body>
+    <!-- background -->
+    <div>
+        <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+        </div>
+    </div>
+    <!-- foreground -->
+    <div class="menu">
+        <a class="return" href="./cis"><ion-icon name="chevron-back-outline"></ion-icon></a>
+        <br><br><br>
+        <div class="search">
+            <input type="text" placeholder='search' name="search" class="input">
+            <button class="search-btn"><ion-icon name="search-outline"></ion-icon></button>
+            <br>
+            <label class="switch">
+                <input class="theme-toggle"type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+    <hr>
+    <div id="wrapper">
+        <div class="category"id='distance'>
+            <h1 class="title">Reduced equation</h1>
+            <p class="info">get reduced equationof a line from the coordinates of two points</p>
+            <a href="" class="open-btn"id="choose-co">Explanation<ion-icon class="icon" name="chevron-forward-outline"></ion-icon></a>
+        </div><hr width="75%">
+        <div align="center" class="input-values">
+            <div class="coordinates">
+                <span class="error-txt"></span>
+                <p class="text">First Point: <input type="text" class="input fpoint" placeholder="x,y"></p>
+                <P class="text">Second Point: <input type="text" class="input spoint" placeholder="x,y"></P>
+                <button id="calculate">Calculate</button>
+                <p id="result">Reduced equation: y=mx+b</p>
+            </div><hr width="50%"><br>
+            <h1>step by step:</h1>
+            <div class="card">
+                <p id="steps">Steps will be shown here</p>
+                <div class="spinner hidden">
+                    <div class="inner">
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/reduced.js"></script>
+</body>
+<footer>
+    <div class="Pinfo">
+        <p class="name pgi"><ion-icon name="calculator-outline"></ion-icon>Maths-S</p>
+        <p class="author pgi">SwirX</p>
+        <!-- <a href="#" class="links pgi">Info</a>
+        <a href="#" class="links pgi">Other Projects</a> -->
+    </div>
+</footer>
+</html>

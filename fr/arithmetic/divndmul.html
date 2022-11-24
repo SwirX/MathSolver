@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordonnées dans l’espace</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" />
+</head>
+<body>
+    <!-- background -->
+    <div>
+        <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+        </div>
+    </div>
+    <!-- foreground -->
+    <div class="menu">
+        <div>
+            <a class="return" href="../index">
+                <span class="material-symbols-outlined">arrow_back_ios_new</span>
+            </a>
+            <br><br><br>
+        </div>
+        <div class="search">
+            <input type="text" placeholder='search' name="search" class="input">
+            <button class="search-btn"><ion-icon name="search-outline"></ion-icon></button>
+            <br>
+            <label class="switch">
+                <input class="theme-toggle"type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+    <hr>
+    <div id="wrapper">
+        <div class="category"id='mul&div'>
+            <h1 class="title">Multiples et diviseurs d'un nombre</h1>
+            <p class="info">Generer tous les multiplpes et diviseurs du nombre entré</p>
+            <a href="" class="open-btn"id="choose-co">Explication<ion-icon class="icon" name="chevron-forward-outline"></ion-icon></a>
+        </div><hr width="75%">
+        <div align="center" class="input-values">
+            <div class="coordinates">
+                <span class="error-txt"></span>
+                <p class="text">nombre: <input type="text" class="input num" placeholder="0"></p>
+                <p>multiple de: <input type="text" id="di" class="input di" placeholder="1"></p>
+                <br>
+                <button id="calculate" class="button">Generer</button>
+                <p id="result">Multiples = none</p>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/divndmul.js"></script>
+</body>
+<footer>
+    <div class="Pinfo">
+        <p class="name pgi"><ion-icon name="calculator-outline"></ion-icon>Maths-S</p>
+        <p class="author pgi">SwirX</p>
+        <!-- <a href="#" class="links pgi">Info</a>
+        <a href="#" class="links pgi">Other Projects</a> -->
+    </div>
+</footer>
+</html>

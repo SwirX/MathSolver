@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordonnées dans l’espace</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- background -->
+    <div>
+        <div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+        </div>
+    </div>
+    <!-- foreground -->
+    <div class="menu">
+        <div>
+        <a class="return" href="../index"><ion-icon name="chevron-back-outline"></ion-icon></a>
+        <br><br><br>
+        </div>
+        <div class="search">
+            <input type="text" placeholder='search' name="search" class="input">
+            <button class="search-btn"><ion-icon name="search-outline"></ion-icon></button>
+            <br>
+            <label class="switch">
+                <input class="theme-toggle"type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+    <hr>
+    <div id="wrapper">
+        <div class="category"id='distance'>
+            <h1 class="title">Distance entre deux points</h1>
+            <p class="info">obtenir la distance entre deux points à partir des coordonnées de vos deux points</p>
+            <a href="./distance" class="open-btn"id="choose-co">Open<ion-icon class="icon" name="chevron-forward-outline"></ion-icon></a>
+        </div><hr width="75%">
+        <div class="category"id='middle'>
+            <h1 class="title">Milieu de deux points</h1>
+            <p class="info">obtenir le point médian d’une ligne à partir des coordonnées de deux points</p>
+            <a href="./middle" class="open-btn"id="choose-co">Open<ion-icon class="icon" name="chevron-forward-outline"></ion-icon></a>
+        </div><hr width="75%">
+        <div class="category"id='Reduced'>
+            <h1 class="title">Équation réduite</h1>
+            <p class="info">obtenir l’équation réduite d’une ligne à deux points</p>
+            <a href="./reduced" class="open-btn"id="choose-co">Open<ion-icon class="icon" name="chevron-forward-outline"></ion-icon></a>
+        </div><hr width="75%">
+    </div>
+    <!-- scripts -->
+    <script src="../javascript/main.js"></script>
+</body>
+</html>
