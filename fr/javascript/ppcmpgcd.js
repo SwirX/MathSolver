@@ -14,8 +14,8 @@ const ls = window.localStorage;
 
 // events
 calcbtn.addEventListener('click', function run(){if(mode==1){PPCM()}else{PGCD()}});
-multibtn.addEventListener("click", ()=>{mode=1;multibtn.classList.add("selected");divisbtn.classList.remove("selected")})
-divisbtn.addEventListener("click", ()=>{mode=2;multibtn.classList.remove("selected");divisbtn.classList.add("selected")})
+multibtn.addEventListener("click", ()=>{mode=1;multibtn.classList.add("selected");divisbtn.classList.remove("selected");resultTxt.textContent="PPCM:";})
+divisbtn.addEventListener("click", ()=>{mode=2;multibtn.classList.remove("selected");divisbtn.classList.add("selected");resultTxt.textContent="PGCD:";})
 
 function calculate(fn) {
     return new Function('return ' + fn)();
@@ -38,21 +38,60 @@ function premier(){
     }
 }
 
-function PPCM(){
-    var n = nbr.value;
+function primedecomposition(n){
     var primedecomp = "";
     for(i=0; i<primeNumbers.length; i++){
         if(n%primeNumbers[i]==0){
             if(n>1){
                 if(primedecomp==""){
-                    primedecomp = primedecomp+`${primeNumbers[i]}`;
-                    n/=primeNumbers[i]
+                    primedecomp = primedecomp+primeNumbers[i];
+                    n/=primeNumbers[i];
+                    i=-1;
                 }else{
-                    primedecomp = primedecomp+`x${primeNumbers[i]}`;
-                    n/=primeNumbers[i]
+                    primedecomp = primedecomp+"x"+primeNumbers[i];
+                    n/=primeNumbers[i];
+                    i=-1;
                 }
             }
         }
     }
-    console.log(primedecomp)
+    return primedecomp
+}
+
+function PGCD(){
+    var number1 = nbr.value.split(",")[0];
+    var number2 = nbr.value.split(",")[1];
+    var num1decomp = primedecomposition(number1).split("x");
+    var num2decomp = primedecomposition(number2).split("x");
+    var commonSmultiples = new Array();
+    for(i=0; i<num1decomp.length; i++){
+        for(o=0; o<num2decomp.length; o++){
+            if(num1decomp[i]==num2decomp[o]){
+                if(!commonSmultiples.includes(num1decomp[i])){
+                    commonSmultiples.push(num1decomp[i]);
+                }
+            }
+        }
+    }
+    resultTxt.textContent = "PGCD:"+commonSmultiples.join("x");
+}
+
+function PPCM(){
+    resultTxt.textContent = "Still working on it"
+    var number1 = nbr.value.split(",")[0];
+    var number2 = nbr.value.split(",")[1];
+    var num1decomp = primedecomposition(number1).split("x");
+    var num2decomp = primedecomposition(number2).split("x");
+    var commonBmultiples = new Array();
+    for(i=0; i<num1decomp.length; i++){
+        for(o=0; o<num2decomp.length; o++){
+            if(num1decomp[i]==num2decomp[o]){
+                if(!commonBmultiples.includes(num1decomp[i])){
+                    commonBmultiples.push([num1decomp[i], 1]);
+                }else{
+                    commonBmultiples
+                }
+            }
+        }
+    }
 }

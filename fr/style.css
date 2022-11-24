@@ -537,3 +537,9 @@ input {
     box-shadow:  var(--btn3dshadow);
     color: var(--secondarycolor);
    }
+
+.sup {
+ position: relative;
+ bottom: 1ex; 
+ font-size: 80%;
+}
