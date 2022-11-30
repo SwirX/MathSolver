@@ -61,37 +61,93 @@ function primedecomposition(n){
 function PGCD(){
     var number1 = nbr.value.split(",")[0];
     var number2 = nbr.value.split(",")[1];
-    var num1decomp = primedecomposition(number1).split("x");
-    var num2decomp = primedecomposition(number2).split("x");
-    var commonSmultiples = new Array();
-    for(i=0; i<num1decomp.length; i++){
-        for(o=0; o<num2decomp.length; o++){
-            if(num1decomp[i]==num2decomp[o]){
-                if(!commonSmultiples.includes(num1decomp[i])){
-                    commonSmultiples.push(num1decomp[i]);
-                }
-            }
+    var num1decomp = primedecomposition(number1);
+    var num2decomp = primedecomposition(number2);
+    var returnval = "";
+    for(i=0; i<num1decomp.split("x").length; i++){
+        var decomp = num1decomp.split("x");
+        var matches = num2decomp.matchAll(decomp[i]);
+        var l = 0;
+        for(const match of matches){l++;}
+        var matches2 = num1decomp.matchAll(decomp[i]);
+        var k = 0;
+        for(const match of matches2){k++}
+        if(l>k){
+            l=k
         }
+        // Adding a multiplication sign if there is an already written number
+        if(returnval!=""){returnval+="x"}
+        // Check if the power is equal to 1 to not write it
+        if(l==1){returnval = decomp[i]}
+        else{returnval += `${decomp[i]}<span class='sup'>${l}</span>`;}
+        
+        // Check if the next number is equal to the current number to skip it
+        if(i++<decomp.length){
+            if(decomp[i]==decomp[i+1]){
+                i+1
+            }
+        }else{break}
     }
-    resultTxt.textContent = "PGCD:"+commonSmultiples.join("x");
+    resultTxt.innerHTML = "PGCD:"+returnval;
 }
 
 function PPCM(){
-    resultTxt.textContent = "Still working on it"
     var number1 = nbr.value.split(",")[0];
     var number2 = nbr.value.split(",")[1];
-    var num1decomp = primedecomposition(number1).split("x");
-    var num2decomp = primedecomposition(number2).split("x");
-    var commonBmultiples = new Array();
-    for(i=0; i<num1decomp.length; i++){
-        for(o=0; o<num2decomp.length; o++){
-            if(num1decomp[i]==num2decomp[o]){
-                if(!commonBmultiples.includes(num1decomp[i])){
-                    commonBmultiples.push([num1decomp[i], 1]);
-                }else{
-                    commonBmultiples
-                }
+    var num1decomp = primedecomposition(number1);
+    var num2decomp = primedecomposition(number2);
+    var returnval = "";
+    var LST = new Array();
+    var lst = new Array();
+    for(i=0; i<num1decomp.split("x").length; i++){
+        var decomp = num1decomp.split("x");
+        var matches = num2decomp.matchAll(decomp[i]);
+        var l = 0;
+        for(const match of matches){l++;}
+        var matches2 = num1decomp.matchAll(decomp[i]);
+        var k = 0;
+        for(const match of matches2){k++}
+        if(l<k){
+            l=k
+        }
+        var d = num1decomp.split("x");
+        var d2 = num2decomp.split("x");
+        for(x=0; x<d.length; x++){
+            if(d[x]!=decomp[i]){lst.push(d[x])}
+        }
+        for(x=0; x<d2.length; x++){
+            if(d2[x]!=decomp[i]){lst.push(d2[x])}
+        }
+        str = lst.join("x");
+        // Adding a multiplication sign if there is an already written number
+        if(returnval!=""){returnval+="x"}
+        // Check if the power is equal to 1 to not write it
+        if(l==1){returnval = decomp[i]}
+        else{returnval += `${decomp[i]}<span class='sup'>${l}</span>`;}
+        LST.push(decomp[i])
+        
+        // Check if the next number is equal to the current number to skip it
+        if(i++<decomp.length){
+            if(decomp[i]==decomp[i+1]){
+                i+1
+            }
+        }else{break}
+    }
+    var d = num1decomp.split("x")
+    var f = num2decomp.split("x")
+    var array = new Array();
+    for(i=0; i<LST.length; i++){
+        for(x=0; x<d.length; x++){
+            if(d[x]!=LST[i]){
+                array.push(d[x]);
+            }
+        }
+        for(x=0; x<f.length; x++){
+            if(f[x]!=LST[i]){
+                array.push(f[x]);
             }
         }
     }
+    returnval += "x"+array.join('x')
+    resultTxt.innerHTML = "PPCM: "+returnval;
 }
