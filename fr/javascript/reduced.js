@@ -70,15 +70,17 @@ function calcF(){
             var b = y1 + invXm;
             const L1="Nous considérons l’équation réduite de AB comme y=mx+b";
             const L2="Déterminons m:";
-            const L3="m=(yᵇ-yᵃ)/(xᵇ-xᵃ)";
-            const L4="Alors AB: y="+m+"x+b";
-            const L5="Déterminons b:";
-            const L6="Puisque A∈(AB)";
-            const L7="yᵃ=m*xᵃ+b";
-            const L8=y1+"="+m+"*"+x1+"+b";
-            const L9=y1+"="+xm+"+b";
-            const L10=b+"=b";
-            const lines = [L1,L2,L3,L4,L5,L6,L7,L8,L9,L10];
+            const L3="m=(yᵇ - yᵃ) / (xᵇ - xᵃ)";
+            const L4=`m=(${y2} - ${y1}) / (${x2} - ${x1})`;
+            const L5=`m=${dif1} / ${dif2}`;
+            const L6="Alors AB: y="+m+"x+b";
+            const L7="Déterminons b:";
+            const L8="Puisque A∈(AB)";
+            const L9="yᵃ=m*xᵃ+b";
+            const L10=y1+"="+m+"*"+x1+"+b";
+            const L11=y1+"="+xm+"+b";
+            const L12=b+"=b";
+            const lines = [L1,L2,L3,L4,L5,L6,L7,L8,L9,L10,L11,L12];
             const txt = lines.join("<br>");
             
             resultTxt.innerHTML = "Equation réduite: y="+m+"x+"+b;

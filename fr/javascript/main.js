@@ -1,4 +1,5 @@
-const theme_toggle = document.querySelector(".theme-toggle");
+const theme_toggle = document.querySelector("#dispmode");
+const anim_toggle = document.querySelector("#bganim");
 const body = document.querySelector('body');
 const searchbtn = document.querySelector('.search-btn');
 // const ls = window.localStorage;
@@ -17,6 +18,9 @@ const searchbtn = document.querySelector('.search-btn');
 
 theme_toggle.onclick = ()=>{
     body.classList.toggle('darkmode');
+}
+theme_toggle.onclick = ()=>{
+    document.querySelector(".circles").remove();
 }
 
 
@@ -39,7 +43,7 @@ function SecretSnakeManip(){
         clickcount++;
         print("clickcount= "+clickcount);
         if(clickcount >=5){
-            window.location.href="file:///C:/Users/HP/Desktop/ali/Projects/mathslol/Snake/index.html";
+            window.location.href="/maths/snake";
         }
     }
 }

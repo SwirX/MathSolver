@@ -26,12 +26,13 @@
             <h1 class="text">Bienvenue</h1>
             <div class="search">
                 <input type="text" placeholder='search' name="search" class="input">
-                <button class="search-btn"><ion-icon name="search-outline"></ion-icon></button>
+                <button title="search" type="submit" class="search-btn"><ion-icon name="search-outline"></ion-icon></button>
                 <br>
                 <label class="switch">
-                    <input class="theme-toggle"type="checkbox">
+                    <input class="theme-toggle"type="checkbox" id="dispmode">
                     <span class="slider"></span>
                 </label>
+                <button id="bganim">Debug:[rem-bganim]</button>
             </div>
         </div>
             <hr>
@@ -43,24 +44,34 @@
                 <div class="category"id='coordinates'>
                     <h1 class="title">Coordonnées dans l’espace</h1>
                     <p class="info">obtenir la distance entre deux points ou le milieu d’une ligne ou l’équation réduite</p>
-                    <a href="./cis/cis" class="open-btn"id="choose-co">Open<span class="material-symbols-outlined">open_in_new</span></a>
-                </div>
-                <div class="category"id='graphcalc'>
-                    <h1 class="title">Calculatrice graphique</h1>
-                    <p class="info">obtenir le graphique d’une équation linéaire</p>
-                    <a href="./graph" class="open-btn"id="choose-co">Open<span class="material-symbols-outlined">open_in_new</span></a>
+                    <a href="./cis/cis" class="open-btn"id="choose-co">Ouvrir<span class="material-symbols-outlined">open_in_new</span></a>
                 </div>
                 <div class="category" id="arithmetic-in-n">
                     <h1 class="title">Arithmetique dans ℕ</h1>
                     <p class="info">Etude des proprietés des nombres entiers naturels</p>
-                    <a href="./arithmetic/index.html" class="open-btn" id="choose-co">Open<span class="material-symbols-outlined">open_in_new</span></a>
+                    <a href="./arithmetic/" class="open-btn" id="choose-co">Ouvrir<span class="material-symbols-outlined">open_in_new</span></a>
+                </div>
+                <div class="category"id='functions'>
+                    <h1 class="title">Fonctions</h1>
+                    <p class="info"></p>
+                    <a href="./functions" class="open-btn"id="choose-co">Ouvrir<span class="material-symbols-outlined">open_in_new</span></a>
+                </div>
+                <div class="category"id='graphcalc'>
+                    <h1 class="title">Calculatrice graphique</h1>
+                    <p class="info">obtenir le graphique d’une équation linéaire</p>
+                    <a href="./graph" class="open-btn"id="choose-co">Ouvrir<span class="material-symbols-outlined">open_in_new</span></a>
                 </div>
             </div>
             <br><br><br><br>
         <!-- scripts -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <script src="./javascript/main.js"></script>
+        <script src="./javascript/main.js?v=1.1"></script>
         <script src="./javascript/EqSBrute.js" ></script>
     </body>
+    <footer>
+        <center>
+            <span class="cdt" style="font-family: Arial;">Ali Bouyakhsass</span>
+        </center>
+    </footer>
 </html>

@@ -64,8 +64,8 @@ body{
       width: 20px;
       height: 20px;
       background: var(--primarycolor);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      /* backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px); */
       border-radius: 50%;
       border: 1px solid rgba(255, 255, 255, 0.18);
       animation: animate 25s linear infinite;
@@ -180,6 +180,10 @@ body{
       }
   
   }
+
+.cdt {
+    font-size: smaller;
+}
 
   /* page */
   .input {
@@ -346,11 +350,13 @@ body{
 }
 .return-txt{
     position: absolute;
-    color: var(--secondarycolor);
+    color: var(--primarycolor);
     text-decoration: none;
     padding: 10px 10px;
     left: 90%;
     text-align: right;
+    background: #353535;
+    border-radius: 8px;
 }
 /* Distance */
 .fpoint{
